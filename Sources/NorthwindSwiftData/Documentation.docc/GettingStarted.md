@@ -52,6 +52,10 @@ Alternatively, if readonly access is sufficient,
 the ``NorthwindStore/readOnlyModelContainer()`` function can be used to get 
 direct access to the database contained within the package.
 
+> At some point when building the project, Xcode is going to ask whether you
+> trust the `@Model` macro provided by ManagedModels. Choose yes if you do,
+> and no if not. Or review the sources in advance to see what the macro does.
+
 
 ## Write a SwiftUI View that works w/ the Database
 
@@ -63,8 +67,8 @@ import NorthwindSwiftData
 
 struct ContentView: View {
 
-    @FetchRequest(sort: \Product.name)
-    private var products: [ Product ]
+    @FetchRequest(sort: \.name)
+    private var products: FetchedResults<Product>
     
     var body: some View {
         NavigationStack {

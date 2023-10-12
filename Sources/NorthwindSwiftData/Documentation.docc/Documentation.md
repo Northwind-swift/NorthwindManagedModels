@@ -61,7 +61,7 @@ The TL;DR is:
   ```
 - Use the provided models in a SwiftUI View:
   ```swift
-  @FetchRequest(sort: \Product.name) var products : [ Product ]
+  @FetchRequest(sort: \.name) var products : FetchedResults<Product>
 
   ForEach(products) { product in 
       Text(verbatim: product.name) 
