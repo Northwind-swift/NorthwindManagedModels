@@ -36,7 +36,7 @@ dataset.
 ### Using it in a SwiftUI app
 
 1. Create a SwiftUI app in Xcode
-2. Add NorthwindSwiftData as a dependency, the url is:
+2. Add NorthwindManagedModels as a dependency, the url is:
    `https://github.com/Northwind-swift/NorthwindManagedModels`
 3. Setup the model container for the UI:
 
