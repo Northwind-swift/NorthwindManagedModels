@@ -15,9 +15,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Build Swift Package
-        run: xcodebuild build -scheme NorthwindSwiftData -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0' | xcpretty && exit ${PIPESTATUS[0]}
+        run: xcodebuild build -scheme NorthwindManagedModels -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0' | xcpretty && exit ${PIPESTATUS[0]}
       - name: Run Tests
-        run: xcodebuild test -scheme NorthwindSwiftData -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0' | xcpretty && exit ${PIPESTATUS[0]}
+        run: xcodebuild test -scheme NorthwindManagedModels -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0' | xcpretty && exit ${PIPESTATUS[0]}
   nextstep:
     runs-on: macos-13
     steps:
